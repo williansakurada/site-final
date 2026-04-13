@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre</title>
+<link rel="stylesheet" href="sobre.css">
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<header class="navbar">
+    <h1 class="logo">VAMPIRE SLASHER</h1>
+    <nav>
+        <a href="play.html">Play</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="imagens.html">Imagens</a>
+        <a href="feedback.html">Feedback</a>
+        <br>
+        <button class="btn-dark" onclick="setTheme('dark')">Escuro</button>
+        <button class="btn-dark" onclick="setTheme('light')">Claro</button>
+    </nav>
+</header>
+
+<main class="main-card">
+    <h2>SOBRE O JOGO</h2>
+    <div class="divider"></div>
+
+    <p class="description">
+        Vampire Slasher é um jogo rápido e simples, inspirado nos clássicos da era Flash. 
+        Nele, você controla um cavaleiro que enfrenta um vampiro em um combate direto e dinâmico. 
+        Sem pressão de tempo e com mecânicas fáceis de aprender, o jogo foi feito para proporcionar 
+        diversão imediata, ideal para quem quer jogar por alguns minutos e conquistar a vitória de 
+        forma rápida e satisfatória.
+    </p>
+</main>
+
+<script>
+if (localStorage.getItem('tema') === 'light') {
+    document.body.classList.add('light');
+}
+
+function setTheme(mode) {
+    if (mode === 'light') {
+        document.body.classList.add('light');
+        localStorage.setItem('tema', 'light');
+    } else {
+        document.body.classList.remove('light');
+        localStorage.setItem('tema', 'dark');
+    }
+}
+</script>
+
+</body>
+</html>
